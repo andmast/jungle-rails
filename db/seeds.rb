@@ -36,7 +36,7 @@ puts "Re-creating Products ..."
 Product.destroy_all
 
 cat1.products.create!({
-  name:  'Men\'s Classy shirt',
+  name:  'Men\'s Dress shirt',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel1.jpg'),
   quantity: 10,
