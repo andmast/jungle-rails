@@ -1,3 +1,18 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<h1><%= @test %></h1>
+
+<header class="page-header">
+    <h1>Sign Up for Jungle</h1>
+</header>
+<%= form_for :user, url: '/users' do |form| %>
+
+    First Name: <%= form.text_field :first_name %>
+    <br>
+    Last Name: <%= form.text_field :last_name %>
+    <br>
+    Email: <%= form.text_field :email %>
+    <br>
+    Password: <%= form.password_field :password %>
+    <br>
+    Password Confirmation: <%= form.password_field :password_confirmation %>
+    <br>
+    <%= form.submit "Submit" %>
+<% end %>
