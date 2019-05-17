@@ -137,13 +137,13 @@ cat3.products.create!({
 Review.destroy_all
 
   Product.first.reviews.create({
-    user_id: rand(1..5),
+    user_id: 1,
     description: Faker::Hipster.paragraph(4),
     rating: rand(1..5)
   })
 
   Product.last.reviews.create({
-    user_id: rand(1..5),
+    user_id: 1,
     description: Faker::Hipster.paragraph(4),
     rating: rand(1..5)
   })
