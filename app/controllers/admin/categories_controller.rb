@@ -1,4 +1,5 @@
 class Admin::CategoriesController < ApplicationController
+  before_filter :authenticate
 
   def index
     @categories = Category.all
@@ -25,7 +26,5 @@ class Admin::CategoriesController < ApplicationController
       :name
     )
   end
-
-
 
 end
