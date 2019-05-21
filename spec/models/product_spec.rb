@@ -20,8 +20,6 @@ RSpec.describe Product, type: :model do
     # end
     it "should not be valid without a price" do
       @product.price_cents = nil
-      @product.valid?
-      puts @product.errors.inspect
       expect(@product).to_not be_valid
     end
     it "should not be valid without a quantity" do
